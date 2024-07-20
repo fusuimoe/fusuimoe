@@ -1,0 +1,11 @@
+{
+  "cSpell.words": ["NEXTAUTH"],
+  "eslint.workingDirectories": [
+    {
+      "pattern": "./frontend/apps/*"
+    },
+    {
+      "pattern": "./frontend/packages/*"
+    }
+  ]
+}
