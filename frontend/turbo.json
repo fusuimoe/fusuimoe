@@ -1,0 +1,34 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalEnv": [
+    "NEXTAUTH_URL",
+    "NEXTAUTH_SECRET",
+    "SIGNIN_ALLOWED_EMAILS",
+    "SPOTIFY_CLIENT_ID",
+    "SPOTIFY_CLIENT_SECRET",
+    "SPOTIFY_PLAYLIST_ID",
+    "HERO_MARKDOWN_FILENAME",
+    "GITHUB_PERSONAL_ACCESS_TOKEN",
+    "KV_URL",
+    "ENCRYPTION_KEY",
+    "REVALIDATE_SECONDS",
+    "NEXT_PUBLIC_SPOTIFY_LIBRARY_LIMIT"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    },
+    "lint": {},
+    "type-check": {},
+    "test": {},
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}
